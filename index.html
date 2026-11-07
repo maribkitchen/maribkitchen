@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>مطبخ مارب | يمني وشامي - صويلح</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800;900&display=swap">
+<style>
+:root{--bg:#fffaf4;--ink:#35190b;--mute:#76563f;--or:#c4570f;--on-or:#fff;--card:#fff;--line:#ecd9c8;--sun:#f4b63f;--hero:#c4570f;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1c110a;--ink:#f6e9dc;--mute:#c9ab94;--or:#f59a52;--on-or:#1c110a;--card:#2a1a10;--line:#4a3222;--hero:#8f3f0a;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#1c110a;--ink:#f6e9dc;--mute:#c9ab94;--or:#f59a52;--on-or:#1c110a;--card:#2a1a10;--line:#4a3222;--hero:#8f3f0a;color-scheme:dark}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Cairo","Segoe UI",Tahoma,sans-serif;line-height:1.7;padding-bottom:84px}
+a{color:inherit}
+.hero{background:var(--hero);color:#fff;padding:56px 20px 44px;text-align:right}
+.wrap{max-width:860px;margin:0 auto}
+.hero h1{font-size:clamp(3.6rem,17vw,8rem);line-height:1;margin:0;font-weight:900;letter-spacing:-.01em}
+.hero .sub{font-size:1.5rem;font-weight:600;margin:6px 0 18px;color:var(--sun)}
+.hero p{max-width:34ch;font-size:1.15rem;margin:0 0 26px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:12px 24px;border-radius:999px;font-weight:800;text-decoration:none;font-size:1.05rem;border:2px solid #fff}
+.btn.solid{background:#fff;color:#8f3f0a}
+.btn.ghost{color:#fff}
+.btn:focus-visible,.tab:focus-visible{outline:3px solid var(--sun);outline-offset:3px}
+.band{background:var(--sun);color:#35190b;padding:16px 20px;font-weight:600}
+.band b{font-weight:900}
+section{padding:40px 20px}
+h2{font-size:2rem;margin:0 0 18px;font-weight:900}
+.tabs{display:flex;gap:8px;overflow-x:auto;padding-bottom:10px;margin-bottom:18px;scrollbar-width:thin}
+.tab{flex:none;font:inherit;font-weight:600;padding:8px 18px;border-radius:999px;border:1.5px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer}
+.tab[aria-selected="true"]{background:var(--or);border-color:var(--or);color:var(--on-or);font-weight:800}
+.note{color:var(--mute);margin:0 0 12px;font-size:.95rem}
+ul{list-style:none;margin:0;padding:0}
+li{display:flex;align-items:baseline;gap:10px;padding:11px 0;border-bottom:1px dotted var(--line)}
+.n{flex:1 1 auto}
+.pr{display:flex;gap:14px;flex:none}
+.pr span{display:flex;flex-direction:column;align-items:center;line-height:1.2}
+.pr b{color:var(--or);font-weight:800;font-size:1.1rem;font-variant-numeric:tabular-nums}
+.pr small{color:var(--mute);font-size:.78rem}
+.info{background:var(--card);border-top:1px solid var(--line)}
+.info .wrap{display:grid;gap:22px}
+@media(min-width:640px){.info .wrap{grid-template-columns:1fr 1fr}}
+.info h3{margin:0 0 4px;font-size:1.15rem}
+.info p{margin:0;color:var(--mute)}
+.info .ph{font-size:1.6rem;font-weight:900;color:var(--or);text-decoration:none;direction:ltr;display:inline-block}
+footer{padding:22px 20px;text-align:center;color:var(--mute);font-size:.9rem}
+.bar{position:fixed;inset:auto 0 0 0;display:flex;gap:10px;padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));background:var(--card);border-top:1px solid var(--line);z-index:5}
+.bar a{flex:1;text-align:center;padding:12px;border-radius:12px;font-weight:800;text-decoration:none;background:var(--or);color:var(--on-or)}
+.bar a+a{background:transparent;color:var(--or);border:2px solid var(--or)}
+@media(min-width:900px){.bar{display:none}body{padding-bottom:0}}
+</style>
+</head>
+<body>
+<header class="hero"><div class="wrap">
+<h1>مطبخ مارب</h1>
+<div class="sub">يمني وشامي</div>
+<p>خرفان محشية، زرب، منسف، كبسة، مندي، مشاوي، وساندويشات.</p>
+<div class="btns"><a class="btn solid" href="https://wa.me/962796721302">اطلب عبر واتساب</a><a class="btn ghost" href="tel:+962796721302">اتصل: 0796721302</a></div>
+</div></header>
+<div class="band"><div class="wrap"><b>استعداد تام لتلبية جميع مناسباتكم.</b> نجهّز كافة الأكلات الشرقية والغربية، ونخدم مناسباتكم وتجهيزاتها.</div></div>
+
+<section id="menu"><div class="wrap">
+<h2>القائمة</h2>
+<div class="tabs" role="tablist" id="tabs"></div>
+<p class="note" id="note"></p>
+<ul id="list"></ul>
+</div></section>
+
+<section class="info"><div class="wrap">
+<div><h3>العنوان</h3><p>صويلح، المنطقة الصناعية، بجانب مدارس النظم الفنلندية</p></div>
+<div><h3>الطلب والتوصيل</h3><p>يوجد لدينا خدمة توصيل</p><a class="ph" href="tel:+962796721302">079 672 13 02</a></div>
+</div></section>
+<footer>الأسعار بالدينار الأردني</footer>
+
+<nav class="bar" aria-label="طلب سريع"><a href="https://wa.me/962796721302">واتساب</a><a href="tel:+962796721302">اتصال</a></nav>
+
+<script>
+var A=["عربي","فرنسي","وجبة"],G=["200 غ","نص كيلو","كيلو"],Z=["صغير","كبير"];
+function t(l,v){return l.map(function(x,i){return[x,v[i]]})}
+var M=[
+{t:"الوجبات اليومية",i:[["دجاجة بالفريكة والخضار",6.5],["وجبة ربع دجاجة مع رز كبسة أو مندي",2],["نصف دجاجة مع رز كبسة أو مندي",4],["وجبة ربع جاج مع منسف",3],["وجبة قطعة لحمة مع رز كبسة أو مندي",5.5],["وجبة منسف مع قطعة لحمة",6]]},
+{t:"التواصي والزرب",i:[["ورق عنب وكوسا 2 كيلو",25],["ورق عنب وكوسا مع ريش 2.5 كيلو",30],["سدر رز كبسة أو مندي مع دجاجة",7],["سدر زرب مع دجاجة زرب",8],["سدر أوزي أو مقلوبة مع دجاجة",8],["كيلو لحمة مع رز كبسة أو مندي",12],["سدر منسف مع كيلو لحمة",15],["كيلو لحمة زرب مع رز زرب",15],["خدمة طهي اللحوم زرب أو شوي",5]]},
+{t:"المشاوي",i:[["نصف دجاجة مشوية فحم سادة",2.25],["دجاجة مشوية فحم سادة",4.2],["دجاجة مشوية على الفحم مع بطاطا",5.5],["شيش طاووق",t(G,[2,5,9])],["كباب",t(G,[2,5,9])],["شقف",t(G,[3,7,13])],["مشكل",t(G,[3,6,11])]]},
+{t:"ساندويشات المشاوي",i:[["عرايس",t(Z,[.5,1])],["شيش طاووق",t(Z,[1,1.75])],["كباب",t(Z,[1,1.75])],["شقف",t(Z,[1.5,2])]]},
+{t:"السندويشات",n:"السعر حسب نوع الخبز: عربي أو صمون، فرنسي أو كعك، أو وجبة.",i:[["لبنة وسنيورة أو تيركي",t(A,[.5,.75,1.5])],["جبنة بيضاء، حلوم، صفراء",t(A,[.85,1.25,2])],["بيض مقلي أو مسلوق",t(A,[.75,1,1.75])],["أومليت أو فعفوط",t(A,[1,1.5,2.25])],["بطاطا",t(A,[.5,.75,1.5])],["مفركة بطاطا",t(A,[.75,1,1.75])],["دجاج زنجر، شاورما، فاهيتا",t(A,[.75,1.5,2.25])],["دجاج فريد، زرب، بالفطر",t(A,[1,1.5,2.25])],["لحمة شاورما، فاهيتا، بالفطر",t(A,[1.25,1.75,2.5])],["برجر دجاج أو لحمة",t(A,[.85,1.25,2])],["هوت دوج",t(A,[1,1.5,2.25])]]},
+{t:"المقبلات",i:[["صحن سلطة صغير",.5],["صحن سلطة وسط",1],["صحن سلطة عائلي",2],["جاط سلطة",5],["علبة حمص",.75],["علبة متبل",.75],["قلاية بندورة",.75],["صحن مقبلات مكس",3],["يلنجي ربع كيلو",2.5],["يلنجي نصف كيلو",5],["يلنجي كيلو",9]]}
+];
+var tabs=document.getElementById("tabs"),list=document.getElementById("list"),note=document.getElementById("note");
+function f(p){return p.toFixed(2)}
+function show(k){
+  [].forEach.call(tabs.children,function(b,j){b.setAttribute("aria-selected",j===k)});
+  var c=M[k];note.textContent=c.n||"";note.hidden=!c.n;list.innerHTML="";
+  c.i.forEach(function(x){
+    var li=document.createElement("li"),n=document.createElement("span"),p=document.createElement("div");
+    n.className="n";n.textContent=x[0];p.className="pr";
+    if(typeof x[1]==="number"){p.innerHTML="<span><b>"+f(x[1])+"</b></span>"}
+    else{x[1].forEach(function(q){p.innerHTML+="<span><b>"+f(q[1])+"</b><small>"+q[0]+"</small></span>"})}
+    li.appendChild(n);li.appendChild(p);list.appendChild(li);
+  });
+}
+M.forEach(function(c,k){
+  var b=document.createElement("button");b.className="tab";b.type="button";b.setAttribute("role","tab");
+  b.textContent=c.t;b.onclick=function(){show(k)};tabs.appendChild(b);
+});
+show(0);
+</script>
+</body>
+</html>
